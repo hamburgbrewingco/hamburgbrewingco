@@ -18,6 +18,76 @@
     <th></th>
   </tr>
 
+<html>
+  <head>
+    <style>
+    body { font-family: Helvetica; }
+    .map-content h3 { margin: 0; padding: 5px 0 0 0; }
+    </style>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script>
+  // Set the Map variable
+        var map;
+        function initialize() { 
+            var myOptions = {
+            zoom: 9,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+                    
+        var infoWindow = new google.maps.InfoWindow;
+        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+        // Set the center of the map
+        var pos = new google.maps.LatLng(42.7158927, -78.8294768);
+        map.setCenter(pos);
+        function infoCallback(infowindow, marker) { 
+            return function() {
+            infowindow.open(map, marker);
+        };
+   }    
+
+        var all = [
+        <% @locations.each do |location| %>
+          ["<%= location.address %>", "<%= location.latitude %>", "<%= location.longitude %>"],
+        <% end %>
+        ];
+
+   function setMarkers(map, all) {  
+    for (var i in all) {                    
+            var name  = all[i][0];
+            var address = all[i][0];
+            var city  = all[i][0];
+            var state   = all[i][0];
+            var zip   = all[i][0];
+            var lat   = all[i][1];
+            var lng   = all[i][2];
+            var latlngset;
+            latlngset = new google.maps.LatLng(lat, lng);
+            var marker = new google.maps.Marker({  
+              map: map,  title: city,  position: latlngset  
+            });
+            var content = '<div class="map-content"><h3>' + name + '</h3>' + address + '<br />' + city + ', ' + state + ' ' + zip + '<br /><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';         
+            var infowindow = new google.maps.InfoWindow();
+              infowindow.setContent(content);
+              google.maps.event.addListener(
+                marker, 
+                'click', 
+                infoCallback(infowindow, marker)
+              );
+          }
+        }     
+        // Set all markers in the all variable
+        setMarkers(map, all);
+      };
+      // Initializes the Google Map
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas" style="height: 500px; width: 800px;"></div>
+  </body>
+</html>
+
+
 <% @locations.each do |location| %>
   <tr>
     <td><%= location.address %></td>
