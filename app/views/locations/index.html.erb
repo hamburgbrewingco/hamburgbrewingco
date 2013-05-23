@@ -7,17 +7,6 @@
   </p>
 <% end %>
 
-
-<table>
-  <tr>
-    <th>Address</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <html>
   <head>
     <style>
@@ -89,12 +78,24 @@
   </body>
 </html>
 
-
+<table class="table table-striped">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Type</th>
+    <th>Phone#</th>
+    <th>Website</th>
+    <th></th>
+  </tr>
 <% @locations.each do |location| %>
   <tr>
-    <td><img src="/HBCEmblem.png" style="width: 5%;"/><%= location.address %></td>
-    <td><%= location.latitude %></td>
-    <td><%= location.longitude %></td>
+    <td><img src="/HBCEmblemSmall.png" style="width: 50%;"/></td>
+    <td><%= location.name %></td>
+    <td><%= location.address %></td>
+    <td><%= location.vender %></td>
+    <td><%= location.phone %></td>
+    <td><%= location.website %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>

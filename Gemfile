@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'jquery-rails'
 gem 'geocoder'
 gem 'bootstrap-sass', '~> 2.2.2.0'
+gem 'simple_form'
 
 group :production do
 	gem 'pg'
