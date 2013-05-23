@@ -1,9 +1,9 @@
-<h1>Listing locations</h1>
+<h1>Brew Near You</h1>
 
 <%= form_tag locations_path, :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Near", :name => nil %>
+    <button type="submit" class="btn btn-primary">Find Me Beer</button>
   </p>
 <% end %>
 
@@ -83,6 +83,7 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
+  <a href="/locations">Show all</a>
   <body>
     <div id="map_canvas" style="height: 500px; width: 800px;"></div>
   </body>
@@ -91,7 +92,7 @@
 
 <% @locations.each do |location| %>
   <tr>
-    <td><%= location.address %></td>
+    <td><img src="/HBCEmblem.png" style="width: 5%;"/><%= location.address %></td>
     <td><%= location.latitude %></td>
     <td><%= location.longitude %></td>
     <td><%= link_to 'Show', location %></td>
