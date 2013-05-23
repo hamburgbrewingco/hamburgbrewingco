@@ -44,6 +44,7 @@
             infowindow.open(map, marker);
         };
    }    
+        var image = '/HBCMarker.png';
 
         var all = [
         <% @locations.each do |location| %>
@@ -63,7 +64,7 @@
             var latlngset;
             latlngset = new google.maps.LatLng(lat, lng);
             var marker = new google.maps.Marker({  
-              map: map,  title: city,  position: latlngset  
+              map: map,  title: city,  position: latlngset, icon: image  
             });
             var content = '<div class="map-content"><h3>' + name + '</h3>' + address + '<br />' + city + ', ' + state + ' ' + zip + '<br /><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';         
             var infowindow = new google.maps.InfoWindow();
