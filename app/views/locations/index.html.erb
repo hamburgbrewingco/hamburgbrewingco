@@ -26,8 +26,18 @@
         var infoWindow = new google.maps.InfoWindow;
         map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
         // Set the center of the map
-        var pos = new google.maps.LatLng(42.7158927, -78.8294768);
+
+
+        <% if params[:search].present? %>
+        <% @locations.each do |location| %>
+        var pos = new google.maps.LatLng(<%= location.latitude %>, <%= location.longitude %>);
         map.setCenter(pos);
+        <% end %>
+        <% else %>
+        var pos = new google.maps.LatLng(42.715893, -78.829477);
+        map.setCenter(pos);
+        <% end %>
+
         function infoCallback(infowindow, marker) { 
             return function() {
             infowindow.open(map, marker);
@@ -37,23 +47,23 @@
 
         var all = [
         <% @locations.each do |location| %>
-          ["<%= location.address %>", "<%= location.latitude %>", "<%= location.longitude %>"],
+          ["<%= location.name %>", "<%= location.address %>", "<%= location.website %>", "<%= location.phone %>", "<%= location.latitude %>", "<%= location.longitude %>"],
         <% end %>
         ];
 
    function setMarkers(map, all) {  
     for (var i in all) {                    
             var name  = all[i][0];
-            var address = all[i][0];
-            var city  = all[i][0];
-            var state   = all[i][0];
+            var address = all[i][1];
+            var city  = all[i][2];
+            var state  = all[i][3];
             var zip   = all[i][0];
-            var lat   = all[i][1];
-            var lng   = all[i][2];
+            var lat   = all[i][4];
+            var lng   = all[i][5];
             var latlngset;
             latlngset = new google.maps.LatLng(lat, lng);
             var marker = new google.maps.Marker({  
-              map: map,  title: city,  position: latlngset, icon: image  
+              map: map,  title: name,  position: latlngset, icon: image  
             });
             var content = '<div class="map-content"><h3>' + name + '</h3>' + address + '<br />' + city + ', ' + state + ' ' + zip + '<br /><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';         
             var infowindow = new google.maps.InfoWindow();
@@ -74,7 +84,7 @@
   </head>
   <a href="/locations">Show all</a>
   <body>
-    <div id="map_canvas" style="height: 500px; width: 800px;"></div>
+    <div id="map_canvas" style="height: 400px; width: 600px;"></div>
   </body>
 </html>
 
@@ -95,7 +105,7 @@
     <td><%= location.address %></td>
     <td><%= location.vender %></td>
     <td><%= location.phone %></td>
-    <td><%= location.website %></td>
+    <td><%= location.website %> </td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>

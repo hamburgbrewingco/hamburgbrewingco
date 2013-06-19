@@ -21,7 +21,7 @@ src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6
 </script>
 
 <script>
-var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+var myCenter=new google.maps.LatLng(<%= @location.latitude %>,<%= @location.longitude %>);
 
 function initialize()
 {

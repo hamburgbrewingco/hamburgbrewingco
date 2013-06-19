@@ -4,5 +4,6 @@ Hamburgbrewingco::Application.routes.draw do
   root :to => 'pages#home'
   get 'about' => 'pages#about'
   get 'locations' => 'locations#index'
+  get 'events' => 'pages#events'
   
 end

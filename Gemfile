@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'geocoder'
 gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'simple_form'
+gem 'eventbrite-client'
 
 group :production do
 	gem 'pg'
