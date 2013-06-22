@@ -5,5 +5,6 @@ Hamburgbrewingco::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'locations' => 'locations#index'
   get 'events' => 'pages#events'
+  get 'farm' => 'pages#farm'
   
 end

@@ -6,25 +6,24 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-             <a class="brand" href="/">Hamburg Brewing Company</a>
-
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <li>
-                            <%= link_to 'Home',  root_path %>
-                        </li>
-                        <li>    
+                        <li style="margin-top: 40px;">    
                             <%= link_to 'About',  about_path %>
                         </li>
-                        <li>    
-                            <%= link_to 'Locations',  locations_path %>
+                        
+                        <li style="margin-top: 40px;">    
+                            <%= link_to 'Beer Finder',  locations_path %>
                         </li>
-                        <li>    
+                        <li>
+                        <a class="brand" href="/"><img src="/HBCEmblem.png" style="width: 100%;"/></a>
+                        </li>
+                        <li style="margin-top: 40px;">    
                             <a href="http://www.eventbrite.com/org/4212334371" target="blank">Events</a>
                         </li>
-                    </ul>
-                    <ul class="nav pull-right">
-                                <li><%= link_to 'Login',  '#' %></li>
+                        <li style="margin-top: 40px;">    
+                            <%= link_to 'The Farm',  farm_path %>
+                        </li>
                     </ul>
                 </div>
         </div>

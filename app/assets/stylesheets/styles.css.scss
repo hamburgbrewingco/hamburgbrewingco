@@ -4,7 +4,7 @@ $btnPrimaryBackground: purple;
 
 @import 'bootstrap';
 body{
-    padding-top: 60px;
+    padding-top: 120px;
 }
 
 @import 'bootstrap-responsive';
@@ -27,3 +27,24 @@ body{
     margin-left: 30px;
     color: $grayLight;
     }
+
+.navbar .brand {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  float: none;
+}
+.nav-collapse {
+    float:none;
+    font-size: 18px;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+.navbar-inner > .container { 
+    text-align:center;
+ }
+ .navbar .nav li a {
+        padding: 0px 40px 10px 40px;
+      }
