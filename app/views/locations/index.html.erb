@@ -65,7 +65,7 @@
             var marker = new google.maps.Marker({  
               map: map,  title: name,  position: latlngset, icon: image  
             });
-            var content = '<div class="map-content"><h3>' + name + '</h3>' + address + '<br />' + city + ', ' + state + ' ' + zip + '<br /><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';         
+            var content = '<div class="map-content"><h3>' + name + '</h3>' + address + '<br />' + city + '<br /><a href="http://maps.google.com/?daddr=' + address + '" target="_blank">Get Directions</a></div>';         
             var infowindow = new google.maps.InfoWindow();
               infowindow.setContent(content);
               google.maps.event.addListener(
@@ -84,7 +84,7 @@
   </head>
   <a href="/locations">Show all</a>
   <body>
-    <div id="map_canvas" style="height: 400px; width: 600px;"></div>
+    <div id="map_canvas" style="height: 400px; width: 800;"></div>
   </body>
 </html>
 
@@ -94,21 +94,18 @@
     <th>Name</th>
     <th>Address</th>
     <th>Type</th>
-    <th>Phone#</th>
     <th>Website</th>
     <th></th>
   </tr>
 <% @locations.each do |location| %>
   <tr>
-    <td><img src="/HBCEmblemSmall.png" style="width: 50%;"/></td>
+    <td><img src="/HBCEmblemSmall.png" style="width: 60%;"/></td>
     <td><%= location.name %></td>
     <td><%= location.address %></td>
     <td><%= location.vender %></td>
-    <td><%= location.phone %></td>
-    <td><%= location.website %> </td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><a href="<%= location.url %>" target="blank"><%= location.website %></a> </td>
+    <td><%= link_to raw('<i class="icon-edit"></i>'), edit_location_path(location), :class => 'btn' %></td>
+    <td><%= link_to raw('<i class="icon-trash"></i>'), location, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
