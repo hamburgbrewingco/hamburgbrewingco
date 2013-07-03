@@ -5,22 +5,39 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <!--Facebook-->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--Facebook-->
   </head>
   <body>
     <%= render 'layouts/header' %>
     
-    <div class="container">
+  <div class="container">
     <div class="row">
-      <div class="span9">
-    <%= yield %>
-  </div>
-  <div class="span2">
-    <div class="sidebar">
-    <%= render 'layouts/sidebar' %>
+        <div class="span9">
+         <% flash.each do |name, msg| %>
+                <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+        <% end %> 
+        <%= yield %>
+        </div>
+        <div class="span2">
+          <div class="sidebar">
+          <%= render 'layouts/sidebar' %>
+          </div>
+        </div>
     </div>
   </div>
-</div>
     <%= render 'layouts/footer' %>
-    </div>
   </body>
 </html>

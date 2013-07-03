@@ -1,3 +1,4 @@
+<div class="location-box">
 <h1>Brew Near You</h1>
 
 <%= form_tag locations_path, :method => :get do %>
@@ -104,12 +105,16 @@
     <td><%= location.address %></td>
     <td><%= location.vender %></td>
     <td><a href="<%= location.url %>" target="blank"><%= location.website %></a> </td>
+    <% if user_signed_in? %>
     <td><%= link_to raw('<i class="icon-edit"></i>'), edit_location_path(location), :class => 'btn' %></td>
     <td><%= link_to raw('<i class="icon-trash"></i>'), location, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Location', new_location_path %>
+<% if user_signed_in? %>
+<%= link_to 'New Location', new_location_path, :class => 'btn' %>
+<% end %>
+</div>

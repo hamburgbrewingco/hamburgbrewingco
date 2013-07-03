@@ -1,31 +1,15 @@
-<div class="navbar navbar-fixed-top">
+<div class="container">
+  <a href="/"><img src="/HeaderLogo.png" width="20%" class="header-image"/></a>
+  <div class="navbar">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li style="margin-top: 40px;">    
-                            <%= link_to 'About',  about_path %>
-                        </li>
-                        
-                        <li style="margin-top: 40px;">    
-                            <%= link_to 'Beer Finder',  locations_path %>
-                        </li>
-                        <li>
-                        <a class="brand" href="/"><img src="/HBCEmblem.png" style="width: 100%;"/></a>
-                        </li>
-                        <li style="margin-top: 40px;">    
-                            <a href="http://www.eventbrite.com/org/4212334371" target="blank">Events</a>
-                        </li>
-                        <li style="margin-top: 40px;">    
-                            <%= link_to 'The Farm',  farm_path %>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </div>
+      <div class="container">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/locations">Beer Finder</a></li>
+          <li><a href="http://hamburgbrewco.eventbrite.com/" target="blank">Events</a></li>
+        </ul>
+      </div>
+    </div>  
+  </div><!-- /.navbar -->
 </div>

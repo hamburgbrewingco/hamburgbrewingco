@@ -1,22 +1,20 @@
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
 $btnPrimaryBackground: purple;
 
 @import 'bootstrap';
 body{
-    padding-top: 120px;
+
+    background-image:url('/9.jpg');
+    background-attachment:fixed;
+    background-position:center; 
+    padding-top: 0px;
 }
 
 @import 'bootstrap-responsive';
 
-.navbar-inner{
-    @include box-shadow(none !important);
-    border: 0;
-}
 
 .footer{
-    margin-top: 50px;
-    color: $grayLight;
+    margin-top: 80px;
+    background-color: white;
     a{
         color: $gray;
     }
@@ -28,23 +26,75 @@ body{
     color: $grayLight;
     }
 
-.navbar .brand {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  float: none;
+.header-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.nav-collapse {
-    float:none;
-    font-size: 18px;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
-    vertical-align: top;
-}
-.navbar-inner > .container { 
-    text-align:center;
- }
- .navbar .nav li a {
-        padding: 0px 40px 10px 40px;
+
+.navbar .navbar-inner {
+        padding: 0;
       }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+.about-box {
+        background-color: white;
+        margin: 5px;
+        padding: 5px;
+        font-size: 11px;
+        line-height: .5cm;
+        float: left;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #444;
+        width: 200;
+}
+
+.form-box {
+        background-color: white;
+        margin: 5px;
+        padding: 5px;
+        font-size: 11px;
+        line-height: .5cm;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #444;
+        width: 200;
+}
+
+.location-box {
+        background-color: white;
+        margin: 5px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: .5cm;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #444;
+        width: 300;
+}
