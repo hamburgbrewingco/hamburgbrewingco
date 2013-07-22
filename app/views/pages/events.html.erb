@@ -1,11 +1,23 @@
+<head>
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type='text/javascript' src="http://evbdn.eventbrite.com/s3-s3/static/js/platform/Eventbrite.jquery.js"></script>
 <script type='text/javascript'>
-$(document).ready(function(){
-  Eventbrite({'app_key': "UYRU72L7OQUHWLHV7J"}, function(eb){
-    eb.organizer_list_events( {'id': 4183053}, function( response ){
-      document.write(eb.utils.eventList( response, eb.utils.eventListRow ));
+    $(document).ready(function(){
+      Eventbrite({'app_key': "UYRU72L7OQUHWLHV7J"}, function(eb){
+        eb.organizer_list_events( {'id': 4183053, 'statuses': "live,started"}, function( response ){
+          var event_list_html = eb.utils.eventList( response, eb.utils.eventListRow );
+          $("#event-list").html(event_list_html);
+        });
+      });
     });
-  });
-});​
-</script>
+  </script>
+    
+</head>
+
+<body>
+	<div class="location-box">
+	<h1>HBC Events</h1>
+	  <div id="event-list" class="event_list">
+	  </div>
+	</div>
+</body>
