@@ -1,23 +1,790 @@
+
+<!DOCTYPE html>
+
+
+<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" type="text/css" href="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/css/production/icon_ie7.css" />
+<![endif]-->
+
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type='text/javascript' src="http://evbdn.eventbrite.com/s3-s3/static/js/platform/Eventbrite.jquery.js"></script>
-<script type='text/javascript'>
-    $(document).ready(function(){
-      Eventbrite({'app_key': "UYRU72L7OQUHWLHV7J"}, function(eb){
-        eb.organizer_list_events( {'id': 4183053, 'statuses': "live,started"}, function( response ){
-          var event_list_html = eb.utils.eventList( response, eb.utils.eventListRow );
-          $("#event-list").html(event_list_html);
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="msvalidate.01" content="A9AB07B7E430E4608E0BC57AFA5004AA" />
+  <meta name="y_key" content="d92e23811007b438" />
+  <link rel="shortcut icon" href="http://ebmedia.eventbrite.com/s3-build/perm_001/b955ae/django/images/icons/favicon.ico" />
+  <meta name="keywords" content="events, online registration, sell tickets, email invitations, event management, registration software, PayPal, credit cards, online payments" />
+  <meta name="robots" content="index, follow" />
+  
+    
+    <meta name="description" content="Hamburg Brewing Company is using Eventbrite to organize 5 upcoming events. Check out Hamburg Brewing Company&#39;s events, learn more, or contact this organizer." />
+    <meta property="fb:app_id" content="28218816837"/>
+    <meta property="og:url" content="http://www.eventbrite.com/org/4212334371?ref=eofblike" />
+    <meta property="og:title" content="Hamburg Brewing Company" />
+    <meta property="og:description" content="Hamburg Brewing Company is using Eventbrite to organize 5 upcoming events. Check out Hamburg Brewing Company&#39;s events, learn more, or contact this organizer." />
+    <meta property="og:image" content="http://ebmedia.eventbrite.com/s3-build/images/1817077/65206364651/1/logo.png" />
+    <meta property="og:site_name" content="Eventbrite"/>
+    <meta property="og:type" content="eventbriteog:organizer"/>
+
+    <!-- Re-add rel="canonical" to organizer pages  -->
+
+  
+    
+  
+    
+  <link rel="stylesheet" type="text/css" href="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/css/production/base.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/global.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/footer.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/socialshare.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/regionoptions.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/eb.buttons.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/eb.dialog.css" />
+<![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/css/production/2012_redesign.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/2012_redesign.css" />
+<![endif]-->
+
+
+    <link rel="stylesheet" type="text/css" href="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/css/production/organizer_profile.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/socialshare.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/eb.dialog.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/eb.tabs.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/organizer_profile.css" />
+<link rel="stylesheet" type="text/css" href="/static/django/css/src/event.contact-organizer-lightboxes.css" />
+<![endif]-->
+    <style type="text/css" media="screen">
+
+    
+
+    
+
+
+
+body {
+    background-color: #FFFFFF;
+    color: #005580;
+}
+
+.modular a,
+#profile a,
+#social > ul > li > a {
+    color: #45773A;
+}
+
+.modular a,
+#profile a,
+#social ul li a {
+    _color: #45773A;
+}
+
+.modular,
+#upcoming_events_module {
+    background-color: #FFFFFF;
+    border-color: #D5D5D3;
+    color: #000000;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+#upcoming_events_module {
+    border-top: 0;
+    border-width: 0 1px;
+    border-style: solid;
+    background-color: #EFEFEF;
+    *margin-bottom: 0;
+}
+
+#upcoming_events_inner > .tabs > li {
+    background-color: #FFFFFF;
+    background-image: none;
+    border-color: #D5D5D3;
+}
+
+#upcoming_events_inner .tabs li {
+    _background-color: #FFFFFF;
+    _background-image: none;
+    _border-color: #D5D5D3;
+}
+
+#upcoming_events_inner > .tabs > .active {
+    background-color: #FFFFFF;
+}
+
+#upcoming_events_inner .tabs .active {
+    _background-color: #FFFFFF;
+}
+
+#upcoming_events_inner > .tabs > .active > a {
+    color: #000000;
+}
+
+#upcoming_events_inner .tabs .active a {
+    _color: #000000;
+}
+
+#upcoming_events_inner .event_row_details > h2 > span {
+    color: #000000;
+}
+
+#upcoming_events_inner .event_row_details h2 span {
+    _color: #000000;
+}
+
+.upcoming_events_tabbed_content {
+    border-top-width: 1px;
+    border-color: #D5D5D3;
+    background-color: #FFFFFF;
+}
+
+.modular p,
+#profile p {
+    color: #000000;
+}
+
+#info > h1,
+#social > h1,
+#upcoming_events_header {
+    color: #4D7A40;
+    padding: 5px 15px;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#info > h1 {
+    line-height: 27px;
+}
+
+#info_module > h3 {
+    color: #000000;
+}
+
+#info_module h3 {
+    _color: #000000;
+}
+
+#info > h1,
+#social {
+    background: url(http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/images/background/grad_panel_head_50px.png) repeat-x;
+    _background-image: none;
+    background-color: #EFEFEF;
+    padding: 12px 15px 7px 15px;
+    border: 1px solid #D5D5D3;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#social {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#info > h1 {
+    border-bottom: none;
+    margin: 0;
+}
+
+#social .tab_wrapper > .tab_content {
+    background-color: #FFFFFF;
+    border-color: #D5D5D3;
+}
+
+#social .tab_wrapper > .tab_menu > .tab.active {
+    font-weight: normal;
+    color: #000000;
+    border-color: #D5D5D3;
+    background: #FFFFFF;
+    filter: none;
+    _cursor: pointer;
+}
+
+#social .tab_wrapper > .tab_menu > .tab.inactive {
+    color: #45773A;
+    border-color: #D5D5D3;
+    background: #FFFFFF;
+    filter: none;
+    _color: #000000;
+}
+
+#social .tab_wrapper > .tab_menu > .tab.inactive:hover {
+    text-decoration: underline;
+}
+
+#social > h1 {
+    margin: 0 0 5px 0;
+}
+
+#info > h1,
+#social > h1 {
+    _background-image: none;
+    _background-color: #EFEFEF;
+    _color: #4D7A40;
+    _padding: 13px 15px 9px 15px;
+    _border: 1px solid #D5D5D3;
+    _border-bottom: 0;
+}
+
+#container #info > h1,
+#container #social > h1 {
+    _color: #4D7A40;
+}
+
+#upcoming_events_header {
+    _color: #4D7A40;
+    margin-bottom: 0;
+    padding: 18px 15px 12px 15px;
+    border: 1px solid #D5D5D3;
+    border-bottom: 0;
+    background: url(http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/images/background/grad_panel_head_50px.png) repeat-x;
+    _background-image: none;
+    background-color: #EFEFEF;
+}
+
+#upcoming_events_inner .event_row,
+#upcoming_events_inner .event_row:first-child {
+    border-color: #D5D5D3;
+}
+
+#container > .column {
+    padding-top: 0;
+}
+
+#container .column {
+    _padding-top: 0;
+}
+
+#profile {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#profile .inner_content {
+    padding: 0 15px 15px 15px;
+    color: #000000;
+}
+
+#profile > .inner_content > .long_desc > .mask {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 0)), color-stop(100%,rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00FFFFFF', endColorstr='#FFFFFF',GradientType=0 );
+    background: linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+}
+
+#profile > h1 {
+    background: url(http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/images/background/grad_panel_head_50px.png) repeat-x;
+    background-color: #EFEFEF;
+    border-bottom-color: #D5D5D3;
+    border-bottom-style: solid;
+    color: #4D7A40;
+    padding: 12px 15px 7px 15px;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#container #profile h1 {
+    _color: #4D7A40;
+    _background-image: none;
+    _background-color: #EFEFEF;
+    _border-bottom-color: #D5D5D3;
+    _border-bottom-style: solid;
+    _padding: 13px 15px 7px 15px;
+}
+
+.modular h1,
+.modular h2,
+.modular h3,
+.modular h4,
+.modular h5,
+.modular h6 {
+    background-color: transparent;
+    padding: 0;
+}
+
+.upcoming_events_tabbed_content > .no_events {
+    color: #000000;
+}
+
+.upcoming_events_tabbed_content .no_events {
+    _color: #000000;
+}
+
+#feeds_module {
+    background-color: #EFEFEF;
+    color: #4D7A40;
+}
+
+#feeds_module p {
+    color: #4D7A40;
+}
+
+footer {
+    background: url(http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/images/background/fade_foot_1000px.png) repeat-x;
+    _background: none;
+    min-height: 80px;
+}
+
+#org_footer p {
+    color: #333;
+}
+
+#org_footer a {
+    color: #005580;
+}
+
+
+            #content_primary {
+            }
+            #upcoming_events_inner .event_row_details {
+                width: 235px;
+            }
+
+</style>
+
+
+  
+    
+    
+  <!--[if lt IE 9]>
+  <script src="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/js/src/shims/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+  <script src="http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/django/js/src/shims/ie7_beta4.js" type="text/javascript"></script>
+  <![endif]-->
+
+
+    <script type="text/javascript">
+        if (!(/MSIE 6/i).test(navigator.userAgent)) {
+            document.write('<scr'+'ipt src="http://connect.facebook.net/en_US/all.js#xfbml=1"></scr'+'ipt>');
+        }
+    </script>
+
+  
+   <title>Hamburg Brewing Company on Eventbrite</title>
+</head>
+<body class="lang-en %{ LANGUAGE_CODE }">
+    
+    
+
+
+
+
+
+
+
+
+
+<div id="content" class="clrfix">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="content_primary" class="about-box">
+
+
+        
+
+
+
+<div id="upcoming_events">
+    <h1 id="upcoming_events_header">Events</h1>
+    <div id="upcoming_events_module" class="modular">
+        <div id="upcoming_events_inner">
+            <ul class="tabs">
+                
+                <li id="tab_current_events" class='active' ><a href="javascript:void(0);">Current Events</a></li>
+                <li id="tab_past_events" class='' ><a href="javascript:void(0);">Past Events</a></li>
+            </ul>
+            <div class="clear_left"></div>
+
+            <div id="current_events" class="upcoming_events_tabbed_content ">
+                
+
+    <div id="event7125871" class="event_row vevent clrfix">
+        <a href="http://vergetone-eorg.eventbrite.com">
+            <img src="http://ebmedia.eventbrite.com/s3-build/images/1817077/65206364651/1/logo.png" alt="Hamburg Brewing Company" title="Hamburg Brewing Company" class="photo" />
+        </a>
+        <div class="event_row_details">
+            <h2>
+                <a class="url" href="http://vergetone-eorg.eventbrite.com"><span class="summary">HBC Event 1</span></a>
+                <span>
+7/28/13 7PM - 10PM
+</span>
+                <span class="dtstart microformats_only">
+                    2013-07-28 19:00:00
+                    <span class="value-title microformats_only" title="2013-07-28T19:00:00"></span>
+                </span>
+                <span class="dtend microformats_only">
+                    2013-07-28 22:00:00
+                    <span class="value-title microformats_only" title="2013-07-28T22:00:00"></span>
+                </span>
+            </h2>
+                <p class="event_location location vcard">
+                    <span class="fn org microformats_only">Brewery</span>
+                    <span class="adr">
+                        <span class="street-address microformats_only"></span>
+                        <span class="locality"></span>
+                        <span class="hide_me">,&nbsp;</span>
+                    </span>
+                    <span class="geo microformats_only">
+                        <span class="latitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                        <span class="longitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                    </span>
+                </p>
+            <p class="event_description description">Test description</p>
+        </div>
+
+        <p class="action_buttons">
+            <a href="http://vergetone-eorg.eventbrite.com" class="attendee_button">Attend</a>
+        </p>
+
+    </div>
+    <div id="event7125959" class="event_row vevent clrfix">
+        <a href="/event/7147336877/eorg">
+            <img src="http://ebmedia.eventbrite.com/s3-build/images/1817117/65206364651/1/logo.png" alt="Hamburg Brewing Company" title="Hamburg Brewing Company" class="photo" />
+        </a>
+        <div class="event_row_details">
+            <h2>
+                <a class="url" href="/event/7147336877/eorg"><span class="summary">HBC Event 2</span></a>
+                <span>
+7/31/13 7PM - 10PM
+</span>
+                <span class="dtstart microformats_only">
+                    2013-07-31 19:00:00
+                    <span class="value-title microformats_only" title="2013-07-31T19:00:00"></span>
+                </span>
+                <span class="dtend microformats_only">
+                    2013-07-31 22:00:00
+                    <span class="value-title microformats_only" title="2013-07-31T22:00:00"></span>
+                </span>
+            </h2>
+                <p class="event_location location vcard">
+                    <span class="fn org microformats_only">Brewery2</span>
+                    <span class="adr">
+                        <span class="street-address microformats_only"></span>
+                        <span class="locality"></span>
+                        <span class="hide_me">,&nbsp;</span>
+                    </span>
+                    <span class="geo microformats_only">
+                        <span class="latitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                        <span class="longitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                    </span>
+                </p>
+            <p class="event_description description">test description</p>
+        </div>
+
+        <p class="action_buttons">
+            <a href="/event/7147336877/eorg" class="attendee_button">Attend</a>
+        </p>
+
+    </div>
+    <div id="event7126123" class="event_row vevent clrfix">
+        <a href="http://hbco-eorg.eventbrite.com">
+            <img src="http://ebmedia.eventbrite.com/s3-build/images/1817189/65206364651/1/logo.png" alt="Hamburg Brewing Company" title="Hamburg Brewing Company" class="photo" />
+        </a>
+        <div class="event_row_details">
+            <h2>
+                <a class="url" href="http://hbco-eorg.eventbrite.com"><span class="summary">HBC Event 3</span></a>
+                <span>
+8/1/13 7PM - 10PM
+</span>
+                <span class="dtstart microformats_only">
+                    2013-08-01 19:00:00
+                    <span class="value-title microformats_only" title="2013-08-01T19:00:00"></span>
+                </span>
+                <span class="dtend microformats_only">
+                    2013-08-01 22:00:00
+                    <span class="value-title microformats_only" title="2013-08-01T22:00:00"></span>
+                </span>
+            </h2>
+                <p class="event_location location vcard">
+                    <span class="fn org microformats_only">Brewery</span>
+                    <span class="adr">
+                        <span class="street-address microformats_only"></span>
+                        <span class="locality"></span>
+                        <span class="hide_me">,&nbsp;</span>
+                    </span>
+                    <span class="geo microformats_only">
+                        <span class="latitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                        <span class="longitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                    </span>
+                </p>
+            <p class="event_description description">Description3</p>
+        </div>
+
+        <p class="action_buttons">
+            <a href="http://hbco-eorg.eventbrite.com" class="attendee_button">Attend</a>
+        </p>
+
+    </div>
+    <div id="event7174653" class="event_row vevent clrfix">
+        <a href="/event/7196176959/eorg">
+            <img src="http://ebmedia.eventbrite.com/s3-build/images/1839631/65206364651/1/logo.jpg" alt="Hamburg Brewing Company" title="Hamburg Brewing Company" class="photo" />
+        </a>
+        <div class="event_row_details">
+            <h2>
+                <a class="url" href="/event/7196176959/eorg"><span class="summary">HBC Event 5</span></a>
+                <span>
+8/16/13 7PM - 10PM
+</span>
+                <span class="dtstart microformats_only">
+                    2013-08-16 19:00:00
+                    <span class="value-title microformats_only" title="2013-08-16T19:00:00"></span>
+                </span>
+                <span class="dtend microformats_only">
+                    2013-08-16 22:00:00
+                    <span class="value-title microformats_only" title="2013-08-16T22:00:00"></span>
+                </span>
+            </h2>
+                <p class="event_location location vcard">
+                    <span class="fn org microformats_only">HBC Brewery</span>
+                    <span class="adr">
+                        <span class="street-address microformats_only"></span>
+                        <span class="locality"></span>
+                        <span class="hide_me">,&nbsp;</span>
+                    </span>
+                    <span class="geo microformats_only">
+                        <span class="latitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                        <span class="longitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                    </span>
+                </p>
+            <p class="event_description description"></p>
+        </div>
+
+        <p class="action_buttons">
+            <a href="/event/7196176959/eorg" class="attendee_button">Attend</a>
+        </p>
+
+    </div>
+    <div id="event7126441" class="event_row vevent clrfix">
+        <a href="/event/7147820323/eorg">
+            <img src="http://ebmedia.eventbrite.com/s3-build/images/1817423/65206364651/1/logo.jpg" alt="Hamburg Brewing Company" title="Hamburg Brewing Company" class="photo" />
+        </a>
+        <div class="event_row_details">
+            <h2>
+                <a class="url" href="/event/7147820323/eorg"><span class="summary">HBC Event 4</span></a>
+                <span>
+9/9/13 7PM - 10PM
+</span>
+                <span class="dtstart microformats_only">
+                    2013-09-09 19:00:00
+                    <span class="value-title microformats_only" title="2013-09-09T19:00:00"></span>
+                </span>
+                <span class="dtend microformats_only">
+                    2013-09-09 22:00:00
+                    <span class="value-title microformats_only" title="2013-09-09T22:00:00"></span>
+                </span>
+            </h2>
+                <p class="event_location location vcard">
+                    <span class="fn org microformats_only">Ellicotville</span>
+                    <span class="adr">
+                        <span class="street-address microformats_only"></span>
+                        <span class="locality"></span>
+                        <span class="hide_me">,&nbsp;</span>
+                    </span>
+                    <span class="geo microformats_only">
+                        <span class="latitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                        <span class="longitude">
+                            <span class="value-title" title="0.0"></span>
+                        </span>
+                    </span>
+                </p>
+            <p class="event_description description">dafdsfasdf</p>
+        </div>
+
+        <p class="action_buttons">
+            <a href="/event/7147820323/eorg" class="attendee_button">Attend</a>
+        </p>
+
+    </div>
+
+
+            </div>
+
+            <div id="past_events" class="upcoming_events_tabbed_content hide_me">
+                <span class="no_events">
+                    
+                    Currently, Hamburg Brewing Company does not have any  events
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+    </section>
+
+
+
+<div class="clear_left"></div>
+
+</div>
+
+    
+
+
+<script type="text/javascript">
+
+
+
+        var s_account = 'ebeventbriteproduction';
+</script>
+<script type="text/javascript" src="http://ebmedia.eventbrite.com/s3-build/perm_001/68ac98/django/js/production/s_code_eventbrite.js"></script>
+
+
+
+  <script type="text/javascript" src="http://ebmedia.eventbrite.com/s3-build/perm_001/60c01c/django/js/production/jsi18n_en-us.js"></script>
+
+  <script type="text/javascript" src="http://ebmedia.eventbrite.com/s3-build/perm_001/68e762/django/js/production/base.js"></script>
+
+  
+
+
+  <script type="text/javascript" src="http://ebmedia.eventbrite.com/s3-build/perm_001/56e7bb/django/js/production/regionoptions.js"></script>
+
+  <script type="text/javascript">
+    EB.init({
+        mediaUrl: "http://ebmedia.eventbrite.com/s3-build/15317-rc2013-07-15-843f3b7/",
+        ebServer: 'http://www.eventbrite.com',
+        ebDomain: 'eventbrite.com',
+        ebCurrentSchemeServer: 'http://www.eventbrite.com',
+        uid: "64753093",
+        url: "/",
+        urlRegex: /(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?/,
+        urlLooseRegex: /(?:(.+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?/
+    });
+
+    jQuery(document).ready(function($) {
+        EB.RegionOptions.init();
+
+        $('#logged_in, #logged_in_menu').on(EB.MobileUtils.clickEvent(), function(e) {
+            e.stopPropagation();
+            $(this).toggleClass('active');
         });
-      });
+
+        $(document).on(EB.MobileUtils.clickEvent(), function() {
+            $('#logged_in').removeClass('active');
+        });
     });
   </script>
-    
-</head>
 
-<body>
-	<div class="location-box">
-	<h1>HBC Events</h1>
-	  <div id="event-list" class="event_list">
-	  </div>
-	</div>
+
+
+    <script type="text/javascript" src="http://ebmedia.eventbrite.com/s3-build/perm_001/bc632c/django/js/production/organizer_profile.js"></script>
+
+    <script type="text/javascript">
+        EB.OrganizerProfile.set_oid(4212334371);
+        EB.ContactOrganizerLightbox.init({});
+    </script>
+    <script type="text/javascript">//<![CDATA[
+    s.pageName="event registration: organizer"
+    s.channel="event registration"
+    s.prop1="event registration: organizer"
+    s.prop2="event registration: organizer"
+    s.prop3="event registration: organizer"
+    s.prop4="category"
+    s.t()//]]></script>
+
+    <script type="text/javascript">
+//<![CDATA[
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.defer = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-141520-1']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+//]]>
+
+if (!!window.EB) {
+    if (!!window.pageTracker){
+        EB.Analytics.init("", pageTracker);
+    } else {
+        EB.Analytics.init("");
+    }
+}
+</script>
+
 </body>
+</html>
+
+
+
+
+
+
+
