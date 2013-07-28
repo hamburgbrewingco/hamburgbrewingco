@@ -1,49 +1,19 @@
 <div class="footer">
 <div class="container">
-  <hr>	
-<div class="row-fluid">
-				<div class="span12">
-					<div class="span4">
-						<ul class="unstyled">
-							<li>Connect<li>
-							<li><a href="https://www.facebook.com/pages/Hamburg-Brewing-Company/496661553713375" target="blank"><img src="/facebook.png" style="width: 10%;"/>  /HamburgBrewingCompany</a></li>
-							<li><a href="https://twitter.com/HamburgBrewing" target="blank"><img src="/twitter.png" style="width: 10%;"/>  @hamburgbrewing</a></li>
-							<li><a href="#"><img src="/untappd-icon.png" style="width: 10%;"/>  Untappd</a></li>
-							<li><a href="http://www.eventbrite.com/org/4212334371" target="blank"><img src="/eventbrite-logo.gif" style="width: 10%;"/>  HBC Events</a></li>
-						</ul>
-					</div>
-					<div class="span2" style="width: 15%;">
-						<ul class="unstyled">
-							<li>Our Story<li>
-							<li><a href="#">About HBC</a></li>
-							<li><a href="#">The Farm</a></li>
-							<li><a href="#">Our Team</a></li>
-						</ul>
-					</div>
-					<div class="span2" style="width: 15%;">
-						<ul class="unstyled">
-							<li>Services<li>
-							<li><a href="#">Web analytics</a></li>
-							<li><a href="#">Presentations</a></li>
-							<li><a href="#">Code snippets</a></li>
-							<li><a href="#">Job board</a></li>							
-						</ul>
-					</div>
-					<div class="span2" style="width: 15%;">
-						<ul class="unstyled">
-							<li>Team<li>
-							<li><a href="#">Jobs</a></li>
-							<% if user_signed_in? %>
-							<li><%= link_to "Admin Logout", destroy_user_session_path, method: :delete %></li>
-							<% else %>	
-							<li><%= link_to "Admin Signup", new_user_registration_path %></li>
-							<li><%= link_to "Admin Login", new_user_session_path %></li>		
-							<% end %>					
-						</ul>
-					</div>					
-				</div>
-			</div>
-			<div class="fb-like" data-href="https://www.facebook.com/pages/Hamburg-Brewing-Company/496661553713375" data-send="true" data-width="100" data-show-faces="true"></div>
+<hr>
+			<div class="fb-like sidebar-box" data-href="https://www.facebook.com/pages/Hamburg-Brewing-Company/496661553713375" data-send="true" data-width="100" data-show-faces="true"></div>
+			<hr>
+			<ul>
+				<li>About</li>
+				<li>Contact</li>
+				<li>Beers</li>
+				<% if user_signed_in? %>
+				<li><%= link_to "Admin Logout", destroy_user_session_path, method: :delete %></li>
+				<% else %>	
+				<li><%= link_to "Admin Signup", new_user_registration_path %></li>
+				<li><%= link_to "Admin Login", new_user_session_path %></li>		
+				<% end %>
+			</ul>
 			<hr>
 			<div class="row-fluid">
 				<div class="span12">
@@ -55,6 +25,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+
+
+
 	</div>
 </div>

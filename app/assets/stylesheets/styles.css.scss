@@ -2,23 +2,50 @@ $btnPrimaryBackground: purple;
 
 @import 'bootstrap';
 body{
-
-    background-image:url('/Wood.png');
+    background-image:url('/wood.jpg');
     background-attachment:fixed;
     background-position:center; 
     padding-top: 0px;
+    font-family: helvetica;
+    font-color: black;
+}
+
+h1 {
+  font-family: helvetica;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+hr {
+  color: #418B4B;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  font-color: black;
 }
 
 @import 'bootstrap-responsive';
 
-
+.center {
+  text-align: center;
+}
 
 .footer{
     margin-top: 80px;
-    background-color: #EFF1D9;
+    background-color: #273428;
+    font-color: #418B4B;
     a{
-        color: $gray;
+        color: #418B4B;
     }
+}
+.footer li {
+    display:inline;
+    display: table-cell;
+    width: 1%;
+    float: none;
 }
 
 .sidebar{
@@ -26,6 +53,10 @@ body{
     margin-left: 30px;
     color: $grayLight;
     }
+.sidebar-box {
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 10px;
+}
 
 .header-image{
     display: block;
@@ -53,70 +84,56 @@ body{
         float: none;
       }
       .navbar .nav li a {
-        font-weight: bold;
+        font-size: 1.4em;
         text-align: center;
         border-left: 1px solid rgba(255,255,255,.75);
         border-right: 1px solid rgba(0,0,0,.1);
       }
       .navbar .nav li:first-child a {
         border-left: 0;
-        border-radius: 3px 0 0 3px;
       }
       .navbar .nav li:last-child a {
         border-right: 0;
-        border-radius: 0 3px 3px 0;
       }
 .about-box {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8);
         margin: 5px;
         padding: 5px;
         font-size: 11px;
         line-height: .5cm;
         float: left;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
         box-shadow: 1px 1px 10px #444;
         width: 200;
 }
 
 .form-box {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8);
         margin: 5px;
         padding: 5px;
         font-size: 11px;
         line-height: .5cm;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
         box-shadow: 1px 1px 10px #444;
         width: 200;
 }
 
 .location-box {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8);
         margin: 5px;
         padding: 5px;
         font-size: 14px;
         line-height: .5cm;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
         box-shadow: 1px 1px 10px #444;
         width: 300;
 }
 
-.location-box {
-        background-color: white;
-        margin: 5px;
-        padding: 5px;
-        font-size: 14px;
-        line-height: .5cm;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        box-shadow: 1px 1px 10px #444;
-        width: 300;
+.beers {
+        width:100px;
+        padding: 10px;
+}
+
+.beers:hover {
+        -webkit-transform: scale(1.2,1.2);
+        -moz-transform:scale(1.2,1.2);
 }
 
 .event_list{
