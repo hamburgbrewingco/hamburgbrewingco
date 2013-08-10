@@ -1,15 +1,43 @@
-<div class="container">
-  <a href="/"><img src="/HBCHeader.png" width="100%" class="header-image"/></a>
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav">
-          <li><a href="/beers"><img src="/HBCEmblem.png" width="15%"/> Beers</a></li>
-          <li><a href="/about"><img src="/HBCEmblem.png" width="15%"/> About</a></li>
-          <li><a href="/locations"><img src="/HBCEmblem.png" width="15%"/> Beer Finder</a></li>
-          <li><a href="/events"><img src="/HBCEmblem.png" width="15%"/> Events</a></li>
-        </ul>
-      </div>
-    </div>  
-  </div><!-- /.navbar -->
+<script>
+$(document).scroll(function () {
+    var value = $(this).scrollTop();
+    if ( value > 120 ) {
+        $('.topMenu').fadeIn();
+    } else {
+        $('.topMenu').fadeOut();
+    }
+
+});
+</script>
+
+<div class="topMenu container">
+  <div class="container">
+<span class="logo"><a href="/"><img src="/HBCEmblem.png" width="5%"/></a></span>  
+<ul>
+  <li><a href="/beers">BEERS</a></li>
+  <li>|</li>
+  <li><a href="/about">ABOUT</a></li>
+  <li>|</li>
+  <li><a href="/locations">BEER FINDER</a></li>
+  <li>|</li>
+  <li><a href="/events">EVENTS</a></li>
+</ul>
 </div>
+</div>
+
+
+<header>
+  <ul class="nav-left">
+    <li><a href="/beers">BEERS</a></li>
+    <li2>|</li2>
+    <li><a href="/about">ABOUT</a></li>
+    <li2>|</li2>
+  </ul>
+  <span class="logo"><a href="/"><img src="/HeaderLogo.png" width="25%"/></a></span>
+  <ul class="nav-right">
+    <li3>|</li3>
+    <li3><a href="/locations">BEER FINDER</a></li3>
+    <li3>|</li3>
+    <li3><a href="/events">EVENTS</a></li3>
+  </ul>
+</header>
