@@ -5,8 +5,8 @@
 			<hr/>
 			<ul>
 				<li><a href="/beers">Beers</a></li>
-				<li><a href="/about">About</a></li>
 				<li><a href="/locations">Beer Finder</a></li>
+				<li><a href="/about">Brewery</a></li>
 				<li><a href="/events">Events</a></li>
 				<% if user_signed_in? %>
 				<li><%= link_to "Admin Logout", destroy_user_session_path, method: :delete %></li>

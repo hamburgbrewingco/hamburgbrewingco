@@ -66,7 +66,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 84px;
     background: #273428;
     z-index: 1;
 }
@@ -76,57 +76,59 @@ p {
   display: inline-block;
   float: right;
   li{
+    vertical-align: middle;
     display: inline-block;
     color: #F0F0CB;
     font-size: 16px;
-    margin: 16px;
-    a:link {color:#F0F0CB;text-decoration:none;}    /* unvisited link */
-    a:visited {color:#F0F0CB;text-decoration:none;} /* visited link */
-    a:hover {color:#F0F0CB;text-decoration:none;}   /* mouse over link */
-    a:active {color:#F0F0CB;text-decoration:none;}  /* selected link */
+    margin: 30px 16px 16px 16px;
+    a:link {color:#F0F0CB;text-decoration:none;}
+    a:visited {color:#F0F0CB;text-decoration:none;}
+    a:hover {color:#F0F0CB;text-decoration:none;}
+    a:active {color:#F0F0CB;text-decoration:none;}
   }
 }
 
-header{
-  width: 100%;
-  text-align: center;
-  display:block;
-  overflow: hidden;
-  padding: 10px 0px 10px 0px;
-}
-header ul{
+.mainMenu ul{
   list-style: none;
   display: inline-block;
-  vertical-align: middle;
-  margin: 10px;
-  padding: 0;
-  a:link {color:#F0F0CB;text-decoration:none;}    /* unvisited link */
-  a:visited {color:#F0F0CB;text-decoration:none;} /* visited link */
-  a:hover {color:#F0F0CB;text-decoration:none;}   /* mouse over link */
-  a:active {color:#F0F0CB;text-decoration:none;}  /* selected link */
   li{
-    display: inline-block;
+    display: inline;
     color: #F0F0CB;
     font-size: 20px;
-    margin: 30px;
+    margin: 5px;
+    a:link {color:#F0F0CB;text-decoration:none;}
+    a:visited {color:#F0F0CB;text-decoration:none;}
+    a:hover {color:#F0F0CB;text-decoration:none;}
+    a:active {color:#F0F0CB;text-decoration:none;}
   }
   li2{
-    display: inline-block;
+    display: inline;
     color: #F0F0CB;
-    font-size: 20px;
     margin: 0px;
+    a:link {color:#F0F0CB;text-decoration:none;}
+    a:visited {color:#F0F0CB;text-decoration:none;}
+    a:hover {color:#F0F0CB;text-decoration:none;}
+    a:active {color:#F0F0CB;text-decoration:none;}
   }
   li3{
-    display: inline-block;
+    display: inline;
     color: #F0F0CB;
     font-size: 20px;
-    margin: 10px;
+    margin: 10px 0px 10px 10px;
+    a:link {color:#F0F0CB;text-decoration:none;}
+    a:visited {color:#F0F0CB;text-decoration:none;}
+    a:hover {color:#F0F0CB;text-decoration:none;}
+    a:active {color:#F0F0CB;text-decoration:none;}
   }
   li4{
-    display: inline-block;
+    display: inline;
     color: #F0F0CB;
     font-size: 20px;
-    margin: 40px;
+    margin: 10px 10px 10px 0px;
+    a:link {color:#F0F0CB;text-decoration:none;}
+    a:visited {color:#F0F0CB;text-decoration:none;}
+    a:hover {color:#F0F0CB;text-decoration:none;}
+    a:active {color:#F0F0CB;text-decoration:none;}
   }
 }
 
