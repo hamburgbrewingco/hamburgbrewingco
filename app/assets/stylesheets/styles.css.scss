@@ -191,6 +191,16 @@ p {
         padding: 10px;
 }
 
+#search {
+        margin-top: 15px;
+}
+
+.beersearch {
+        width: 100px;
+        height: 100px;
+        font-size: 22px;
+}
+
 .beers:hover {
         -webkit-transform: scale(1.2,1.2);
         -moz-transform:scale(1.2,1.2);

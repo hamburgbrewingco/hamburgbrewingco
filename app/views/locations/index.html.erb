@@ -1,11 +1,16 @@
 <div class="location-box">
 <h1>Brew Near You</h1>
 
+<p class="lead">Here are the current locations where you can find the Hamburg Brewing Company beers.
+Check back
+frequently, more locations are being added! 
+</p>
 <%= form_tag locations_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <button type="submit" class="btn btn-primary">Find Me Beer</button>
-  </p>
+  <span class="beersearch">
+    <%= text_field_tag :search, params[:search], :placeholder => 'Enter your location...', :class => "beersearch", :style => "height:36px; width:260px;font-size:20pt;" %>
+  </span>
+    <button type="submit" class="btn btn-primary btn-large">Find me some Hamburg!</button>
+  
 <% end %>
 
 <html>
@@ -83,7 +88,11 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
+  <% if @locations.empty? %>
+  <span class="center">No Hamburg beers near that location (yet!).<a href="/locations"> Search again?</a></span>
+  <% else %>
   <a href="/locations">Show all</a>
+  <% end %>
   <body>
     <div id="map_canvas" style="height: 400px; width: 800;"></div>
   </body>
