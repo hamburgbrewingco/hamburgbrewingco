@@ -9,6 +9,7 @@ Hamburgbrewingco::Application.routes.draw do
   get 'events' => 'pages#events'
   get 'farm' => 'pages#farm'
   get 'beers' => 'pages#beers'
+  get 'menu' => 'pages#menu'
   get 'age' => 'pages#age'
   
 end
